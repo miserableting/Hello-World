@@ -6,37 +6,46 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
   min-height: 100vh;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .cv-container {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 .cv-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
-  padding: 40px 30px;
+  padding: 50px 40px;
   text-align: center;
+  border-bottom: 5px solid #00d4ff;
 }
 
-.cv-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.header-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 8px;
   font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.title-text {
+  font-size: 1.2rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
   font-size: 0.95rem;
 }
@@ -44,61 +53,73 @@ body {
 .contact-info span {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 5px 12px;
-  border-radius: 20px;
+  gap: 7px;
+  background: rgba(0, 212, 255, 0.15);
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
 }
 
 .cv-section {
-  padding: 30px;
-  border-bottom: 1px solid #e8e8e8;
+  padding: 35px 40px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .cv-section:last-child {
   border-bottom: none;
+  padding-bottom: 40px;
 }
 
 .cv-section h2 {
-  font-size: 1.5rem;
-  color: #667eea;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #667eea;
+  font-size: 1.6rem;
+  color: #1e3c72;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #00d4ff;
   display: inline-block;
+  font-weight: 700;
 }
 
-.cv-section p {
+.cv-section > p {
   color: #555;
-  line-height: 1.7;
-  margin-bottom: 10px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 .cv-item {
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #f9f9f9;
-  border-left: 4px solid #667eea;
-  border-radius: 4px;
+  margin-bottom: 25px;
+  padding: 18px 20px;
+  background: #f8f9fa;
+  border-left: 4px solid #00d4ff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.cv-item:hover {
+  background: #f0f7ff;
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.1);
 }
 
 .item-header {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  margin-bottom: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 15px;
 }
 
 .cv-item h3 {
-  color: #333;
-  font-size: 1.1rem;
+  color: #1e3c72;
+  font-size: 1.15rem;
   margin-bottom: 5px;
+  font-weight: 700;
 }
 
 .duration {
-  background: #667eea;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
   color: white;
-  padding: 4px 12px;
+  padding: 6px 15px;
   border-radius: 20px;
   font-size: 0.85rem;
   white-space: nowrap;
@@ -106,36 +127,98 @@ body {
 }
 
 .company {
-  color: #764ba2;
+  color: #2a5298;
   font-weight: 600;
   font-size: 0.95rem;
+  margin-bottom: 8px;
 }
 
-.skills-grid {
+.details {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.bullet-list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.bullet-list li {
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.bullet-list li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #00d4ff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
   margin-top: 15px;
 }
 
-.skill-badge {
+.skill-category h4 {
+  color: #1e3c72;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.skills-grid {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
   color: white;
-  padding: 10px 15px;
-  border-radius: 25px;
-  font-weight: 500;
-  text-align: center;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 3px 10px rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
 .skill-badge:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+.project-item {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-left: 4px solid #00d4ff;
+  border-radius: 5px;
+}
+
+.project-item h3 {
+  color: #1e3c72;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.project-item p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .cv-section ul {
@@ -144,47 +227,67 @@ body {
 }
 
 .cv-section li {
-  padding: 10px 0;
-  padding-left: 25px;
+  padding: 12px 0;
+  padding-left: 30px;
   position: relative;
   color: #555;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .cv-section li:before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #00d4ff;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .cv-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .cv-header h1 {
-    font-size: 1.8rem;
+  .cv-header {
+    padding: 30px 20px;
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
   }
 
   .contact-info {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .cv-section {
-    padding: 20px;
+    padding: 25px 20px;
+  }
+
+  .cv-section h2 {
+    font-size: 1.3rem;
   }
 
   .item-header {
     flex-direction: column;
-    gap: 10px;
   }
 
   .duration {
     align-self: start;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  .skills-container {
+    grid-template-columns: 1fr;
   }
 }
