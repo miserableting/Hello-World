@@ -3,11 +3,11 @@ import './App.css'
 function App() {
   const cvData = {
     personal: {
-      name: "John Smith",
-      email: "john.smith@example.com",
-      phone: "+1 (555) 123-4567",
-      location: "San Francisco, CA",
-      summary: "Full-stack web developer with 5+ years of experience building scalable applications using React, Node.js, and cloud technologies."
+      name: "Sabrina Ting Changhuan",
+      email: "example@gmail.com",
+      phone: "0123456789",
+      location: "example",
+      summary: "not sure"
     },
     experience: [
       {
